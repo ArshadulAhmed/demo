@@ -1,0 +1,71 @@
+.sideNavWrapper{
+    max-width: 300px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+    .sideNavTopWrapper{
+        .logoBlock{
+            .logoBlockTop{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                img{
+                    max-width: 75px;
+                }
+            }
+        }
+        .searchBlock{
+            margin-bottom: 20px;
+            input{
+                width: 95%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .commonMenuWrapper{
+        .menuWrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            cursor: pointer;
+
+            p{
+                margin: 0px 0px 0px 10px;
+            }
+            .iconBlock{
+                svg{
+                    max-width: 20px;
+                }
+            }
+        }
+    }
+
+    .userBlock{
+        display: flex;
+        background: #ccc;
+        padding: 5px;
+        align-items: center;
+        .userImage{
+           // width: 100px;
+        }
+        .userInfo{
+            
+            :nth-child(1){
+                font-weight: 600;
+                font-size: 18px;
+            }
+            :nth-child(2){
+                font-weight: normal;
+            }
+            p{
+                margin: 0px;
+            }
+        }
+    }
+
+}
