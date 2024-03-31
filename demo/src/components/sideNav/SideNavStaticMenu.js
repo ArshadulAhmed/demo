@@ -1,26 +1,32 @@
 import React from "react";
-import { FiHome } from "react-icons/fi";
+import {useLocation} from 'react-router-dom'
 import SideNavUser from "./SideNavUser";
-
+import { Link } from "react-router-dom";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineContactSupport } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 
-function SideNavStaticMenu(props){
-
+function SideNavStaticMenu({isOpen}){
+    const {pathname} = useLocation()
     return(
         <div className="sideNavStaticMenuWrapper commonMenuWrapper">
+            <Link to='/notification' className={pathname === '/notification' ? 'active': ''}>
             <div className="menuWrapper">
-                <div className="iconBlock"><IoIosNotificationsOutline /></div><p>Notification</p><p className="notificationCount">10</p>
+                <div className="iconBlock"><IoIosNotificationsOutline /></div>{isOpen && <><p>Notification</p><p className="notificationCount"><span>10</span></p></>}
             </div>
+            </Link>
+            <Link to='/support' className={pathname === '/support' ? 'active': ''}>
             <div className="menuWrapper">
-                <div className="iconBlock"><MdOutlineContactSupport /></div><p>Support</p>
+                <div className="iconBlock"><MdOutlineContactSupport /></div>{isOpen && <p>Support</p>}
             </div>
+            </Link>
+            <Link to='/settings' className={pathname === '/settings' ? 'active': ''}>
             <div className="menuWrapper">
-                <div className="iconBlock"><IoSettingsOutline /></div><p>Settings</p>
+                <div className="iconBlock"><IoSettingsOutline /></div>{isOpen && <p>Settings</p>}
             </div>
+            </Link>
 
-            <SideNavUser/>
+            <SideNavUser isOpen={isOpen}/>
         </div>
     )
 }

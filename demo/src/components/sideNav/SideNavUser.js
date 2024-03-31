@@ -3,16 +3,22 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdMoreVert } from "react-icons/md";
 import { FaRegCircleUser } from "react-icons/fa6";
 
-function SideNavUser(props){
+function SideNavUser({isOpen}){
 
     return(
         <div className="userBlock">
            
-           <FaRegCircleUser className="userImage"/>
+           {
+            isOpen && (
+                <div className="leftBlock">
+           <div className="imageBlock"><FaRegCircleUser className="userImage"/></div>
            <div className="userInfo">
             <p>Brooklyn Simmons</p>
             <p>brooklyn@brooklyn.com</p>
            </div>
+           </div>
+            )
+           }
            <MdMoreVert />
         </div>
     )
