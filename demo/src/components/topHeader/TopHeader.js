@@ -11,7 +11,13 @@ function TopHeader(props){
 
     return(
         <div className="topHeaderWrapper">
-            <h1>TopHeader</h1>
+           <div className="left">
+           <p className="heading">Hello, <span>Brooklyn Simmons</span></p>
+           <p className="subHeading">Welcome to <span>spot trading</span></p>
+           </div>
+           <div className="right">
+            <p>Start Trading</p>
+           </div>
         </div>
     )
 }

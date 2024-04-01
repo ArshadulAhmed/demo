@@ -7,7 +7,7 @@ function MainLayout(props) {
     return (
         <div className="mainLayout">
             <SideNavBar />
-            <div>
+            <div className="rightMainContent">
                 <TopHeader/>
                 {props.children}
             </div>
