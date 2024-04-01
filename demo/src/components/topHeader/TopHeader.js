@@ -5,9 +5,6 @@ import '../../assets/scss/topHeader.scss'
 
 
 function TopHeader(props){
-    
-    
-   
 
     return(
         <div className="topHeaderWrapper">
